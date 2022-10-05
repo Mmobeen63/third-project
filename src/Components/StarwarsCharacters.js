@@ -19,7 +19,7 @@ export const StarwarsCharacters = () => {
     return (
         <div className='countContainer'>
             {count > 0 ? <h1>
-                Stars war Character {starWarsData.name}
+                Starwars Character {starWarsData.name}
             </h1> : alert('No Character found')}
             <h2> Description </h2>
             <pre>{JSON.stringify(starWarsData,null,2)}</pre>

@@ -1,6 +1,6 @@
 import {React, useState} from "react";
 
-export const Form=()=>{
+export const SignupForm=()=>{
     const [formData, setFormData]=useState({
         userEmail:'',
         userPassword:'',

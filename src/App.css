@@ -45,6 +45,19 @@
 }
 .NavContent{
   display: flex;
+  flex-direction: row;
+}
+ul{
+  list-style-type: none;
+  display: flex;
+  color: white;
+  margin: 20px;
+}
+li{
+  margin-right: 30px;
+  font-family: sans-serif;
+  letter-spacing: 0.2em;
+  color: white;
 }
 .NavContent>img{
   width: 50px;
@@ -62,6 +75,7 @@
   padding-top: 75px;
   padding-bottom: 30px;
 }
+
 .countContainer{
   padding: 50px;
   width: max-content;

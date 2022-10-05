@@ -24,7 +24,7 @@ export const TextComponent=()=>{
     const styles={
     'background-image': `url(${meme.randomImage})`,
     'background-repeat': 'no-repeat',
-    'background-size': 'contain'
+    'background-size':'cover' 
     }
     
     const getNewMeme=()=>{
@@ -44,7 +44,7 @@ export const TextComponent=()=>{
                 <input type='text' placeholder="Enter First Line" name="firstLine" onChange={handleChange} value={formData.firstLine}></input>
                 <input type='text'placeholder="Enter Second Line" name='secondLine' onChange={handleChange} value={formData.secondLine}></input>
             </div>
-            <div id='button'  >
+            <div id='button'>
                 <button className="memeButton" onClick={getNewMeme}> Get a New Meme Image</button>
             </div>
             <section style={styles}>
