@@ -62,6 +62,22 @@
   padding-top: 75px;
   padding-bottom: 30px;
 }
+.countContainer{
+  padding: 50px;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+}
+.MainContainer{
+  box-sizing: border-box;
+}
+.buttonContainer{
+  display: flex;
+  justify-content: space-between
+}
+.buttonContainer>button{
+  margin-right: 20px;
+}
 .TextContainer>input{
   border-radius: 10px;
   padding: 20px;
@@ -76,7 +92,26 @@
   padding-top: 75px;
   width: 90%;
 }
-button{
+.formContainer{
+  display: flex;
+  flex-direction: column;
+  padding: 0 250px 250px 250px;
+}
+.formContainer>h1{
+  font-size: 50px;
+  font-weight: 400;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.form>input{
+  padding: 25px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+Button{
   padding: 20px;
   width: 100%;
   align-items: center;

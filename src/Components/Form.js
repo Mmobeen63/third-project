@@ -16,18 +16,19 @@ export const Form=()=>{
         })
     }
     const handleSubmit =(e)=>{
-        e.preventDefualt();
+        e.preventDefualt()
         console.log('form submitted')
     }
     return(
-        <div>
-            <form onSubmit={handleSubmit}>
+        <div className="formContainer">
+            <h1>SIGNUP</h1>
+            <form className="form" onSubmit={handleSubmit}>
                 <input type='text' placeholder="Your Email" onChange={handleChange} name='userEmail' value={formData.userEmail} ></input>
                 <input type='text' placeholder="Your Password" onChange={handleChange} name='userPassword' value={formData.userPassword} />
-                <input type='text' placeholder="Your Email" onChange={handleChange} name='confirmPassword' value={formData.confirmPassword} />
+                <input type='text' placeholder="Confirm Password" onChange={handleChange} name='confirmPassword' value={formData.confirmPassword} />
                 <input type='checkbox' id="isChecked" onChange={handleChange}   name='isChecked' checked={formData.isChecked} />
-                <label id="isChecked">I want to join the NewsLetter</label>
-                <button type="submit"> Signup</button>
+                    <label id="isChecked">I want to join the NewsLetter</label>
+                <button> Signup</button>
             </form>
         </div>
     )

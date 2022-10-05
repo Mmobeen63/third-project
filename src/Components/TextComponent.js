@@ -34,11 +34,9 @@ export const TextComponent=()=>{
             <div className="TextContainer">
                 <input type='text' placeholder="Enter First Line" name="firstLine" onChange={handleChange} value={formData.firstLine}></input>
                 <input type='text'placeholder="Enter Second Line" name='secondLine' onChange={handleChange} value={formData.secondLine}></input>
-                <input id="checkBox"type='checkbox' ></input>
-            <label htmlFor="checkFor">Are you Male</label>
             </div>
-            <div id='button' >
-                <button onClick={getNewMeme}> Get a New Meme Image</button>
+            <div id='button'  >
+                <button className="memeButton" onClick={getNewMeme}> Get a New Meme Image</button>
             </div>
             <section style={styles}>
                 <div className="inputText">
@@ -47,7 +45,7 @@ export const TextComponent=()=>{
                     </div>
                     <div id="secondline">
                         {formData.secondLine.length > 0 ? <h1 color="white">{formData.secondLine}</h1>: <h1>Enter Second Line</h1>}
-                    </div>
+                    </div> 
                 </div>
             </section>  
         </div>
