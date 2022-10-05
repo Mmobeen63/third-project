@@ -1,6 +1,6 @@
 import { React, useState, useEffect } from 'react'
 
-export const CounterSection = () => {
+export const StarwarsCharacters = () => {
     const [count, setCount] = useState(1);
     const [starWarsData, setStarWarsData] = useState({})
 

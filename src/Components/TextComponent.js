@@ -1,18 +1,26 @@
 import React from "react";
-import { useState } from "react";
-import data from "../data";
+import { useState,useEffect } from "react";
 
 export const TextComponent=()=>{
     const [formData,setFormData]=useState({
         firstLine:'',
         secondLine:''
     })
+    
     const[meme,setMeme]=useState({
         topText:'',
         bottomText:'',
-        randomImage:'D:\Third Project\third-project\src\Assets\memeimg.png  '
+        randomImage :''
     });
-        // const[secondLine, setSecondLine]=useState('');
+    const[memeData,setMemeData]=useState([])
+    
+    useEffect(()=>{
+        fetch("https://api.imgflip.com/get_memes")
+        .then(res=> res.json())
+        .then(myData=> setMemeData(myData.data.memes))
+    },[])
+    console.log(memeData);
+
     const styles={
     'background-image': `url(${meme.randomImage})`,
     'background-repeat': 'no-repeat',
@@ -20,9 +28,10 @@ export const TextComponent=()=>{
     }
     
     const getNewMeme=()=>{
-        const imageArray= data.url;
-        const generateRandomNumber= Math.floor(Math.random()*imageArray.length)
-        setMeme(prevState=> ({prevState,randomImage: data.url[generateRandomNumber]}) )
+        const generateRandomNumber= Math.floor(Math.random()*memeData.length)
+        setMeme(prevState=> ({
+            prevState, randomImage: memeData[generateRandomNumber].url}) 
+        )
     }
     const handleChange=(e)=>{
         setFormData(prevFormData=>{

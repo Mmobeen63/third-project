@@ -3,15 +3,15 @@ import './App.css';
 import { NavBar } from './Components/NavBar';
 import { TextComponent } from './Components/TextComponent';
 import { Form } from './Components/Form';
-import { CounterSection } from './Components/CounterSection';
+import { StarwarsCharacters } from './Components/StarwarsCharacters';
 
 function App() {
   return (
     <div className='MainContainer'>
-      {/* <NavBar />
+      <NavBar />
       <TextComponent />
-      <Form /> */}
-      < CounterSection />
+      <Form /> 
+      < StarwarsCharacters />
     </div>
   );
 }
